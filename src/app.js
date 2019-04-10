@@ -18,7 +18,7 @@ const renderContacts = () => {
       contacts.forEach(contact => {
         let li = document.createElement('li')
         li.innerHTML = `
-        <div class="max-w-md w-full lg:flex" id:"card">
+        <div class="max-w-md w-full lg:flex" id:"card" style="height:250px">
         <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('https://cdn1.comparetv.com.au/wp-content/uploads/2016/10/phone_hp.jpg')">
         </div>
         <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
@@ -30,8 +30,8 @@ const renderContacts = () => {
               ID: ${contact.id}
             </p>
             <div class="content">
-              <h1>${ contact.name }</h1>
-              <h2>${ contact.company }</h2>
+              <h5>${ contact.name }</h5>
+              <h6>${ contact.company }</h6>
               <p>${ contact.notes }</p> 
               ${ contact.email } | 
               <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
