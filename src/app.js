@@ -54,7 +54,7 @@ const renderContacts = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     renderContacts()
-    const addContactForm = document.querySelector(".new-contact-form")
+    const addContactForm = document.querySelector("#new-contact-form")
     addContactForm.addEventListener("submit", event => {
         event.preventDefault()
         const storage = window.localStorage
