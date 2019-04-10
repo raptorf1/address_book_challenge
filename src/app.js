@@ -18,10 +18,10 @@ const renderContacts = () => {
       contacts.forEach(contact => {
         let li = document.createElement('li')
         li.innerHTML = `
-        <div class="max-w-md w-full lg:flex" id:"card" style="height:250px">
-        <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('https://cdn1.comparetv.com.au/wp-content/uploads/2016/10/phone_hp.jpg')">
+        <div class="max-w-md w-full lg:flex" id:"card">
+        <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('https://cdn1.comparetv.com.au/wp-content/uploads/2016/10/phone_hp.jpg'); height: 100px; width: 100px">
         </div>
-        <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+        <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
           <div class="mb-8">
             <p class="text-sm text-grey-dark flex items-center">
               <svg class="fill-current text-grey w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
