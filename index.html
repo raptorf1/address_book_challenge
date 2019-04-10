@@ -5,16 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
   <title>Address book</title>
 </head>
 
 <body>
   
-  <h1>Contacts</h1>>
+  <h1 class="text-red-dark">Contacts</h1>
 
-  <button class="add-contact">Add Contact</button>
+  <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 border border-blue-darker rounded" id="add-contact">Add Contact</button>
 
-  <div class="contact-list">
+  <div id="contact-list" class="flex mb-4">
   </div>
 
   <form action="#" class="new-contact-form">
@@ -31,7 +32,7 @@
       <label for="twitter">Twitter</label>
       <input id="contact-twitter" name="twitter" type="text">
       
-      <input class="save-contact" type="submit" value="Save contact">
+      <input class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 border border-blue-darker rounded" id="save-contact" type="submit" value="Save contact">
   </form>
   
   <script src="./dist/bundle.js"></script>
