@@ -77,5 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
              
 
         renderContacts()
+        window.location.reload(true)
     })
 })
