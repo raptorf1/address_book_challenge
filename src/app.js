@@ -33,7 +33,7 @@ const renderContacts = () => {
               <h5>${ contact.name }</h5>
               <h6>${ contact.company }</h6>
               <p>${ contact.notes }</p> 
-              ${ contact.email } | 
+              <a href="mailto:${ contact.email }">Send Email</a> | 
               <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
             </div>
         </div>
