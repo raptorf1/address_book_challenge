@@ -21,6 +21,14 @@ li {
     background: white; 
     margin: 10px;}
 
+    @media (max-width: 1216px) {
+        ul { 
+            grid-template-columns: 1fr 1fr 1fr; 
+            width: 100%;
+            }
+
+    }
+    
     @media (max-width: 992px) {
         ul { 
             grid-template-columns: 1fr 1fr; 
@@ -36,5 +44,4 @@ li {
             }
 
     }
-
-   
+    

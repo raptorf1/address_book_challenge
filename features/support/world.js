@@ -45,6 +45,8 @@ class AddressBookWorld {
       case 'save contact':
         return '#save-contact'
         break
+      case 'remove':
+        return '#remove'
       default:
         throw `${btnName} button is not defined`
         break
@@ -63,7 +65,7 @@ class AddressBookWorld {
     let actualContent = pageContent.match(unexpectedContent)
     expect(actualContent).to.be.eq(null)
   }
-  
+
 }
 
 setWorldConstructor(AddressBookWorld)
