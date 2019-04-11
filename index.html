@@ -99,9 +99,10 @@ function deleteContact(id){
   if (a[i].id == id) {
   a.splice(i ,1);
   window.localStorage.setItem('contacts', JSON.stringify(a))
+  window.location.reload(true);
   }
 }
-window.location.reload(true);
+
 }
 
 
