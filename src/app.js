@@ -37,7 +37,10 @@ const renderContacts = () => {
               <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
               <br>
               <br>
-              <button class="bg-red hover:bg-red-dark text-white font-bold py-1 px-1 border border-blue-darker rounded-full" onclick="deleteContact(${contact.id})">Remove</button>      
+              <button class="bg-green hover:bg-green-dark text-white font-bold py-1 px-1 border border-blue-darker rounded-full" onclick="editContact(${contact.id})">Edit</button>
+              <br>
+              <br>
+              <button class="bg-red hover:bg-red-dark text-white font-bold py-1 px-1 border border-blue-darker rounded-full" onclick="deleteContact(${contact.id})">Remove</button>
               </div>
         </div>
       </div>     
