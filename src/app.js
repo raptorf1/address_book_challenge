@@ -47,7 +47,7 @@ const renderContacts = () => {
       // Lastly, append the list to the contact-list container.
       div.appendChild(ul) 
     } else { 
-      div.innerHTML = '<p>You have no contacts in your address book</p>' 
+      div.innerHTML = '<img src="nocontacts.gif" alt="You have no contacts in your address book"</img>' 
     }
   }
 
