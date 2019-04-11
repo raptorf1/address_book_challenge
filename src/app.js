@@ -35,7 +35,10 @@ const renderContacts = () => {
               <p>${ contact.notes }</p> 
               <a href="mailto:${ contact.email }">Send Email</a> | 
               <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
-            </div>
+              <br>
+              <br>
+              <button class="bg-red hover:bg-red-dark text-white font-bold py-1 px-1 border border-blue-darker rounded-full" onclick="deleteContact(${contact.id})">Remove</button>      
+              </div>
         </div>
       </div>     
       
@@ -67,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
             twitter,
         } = addContactForm.elements
 
+        
         const contact = {
             id: Date.now(),
             name: name.value,

@@ -92,6 +92,20 @@ hideShowAddContactForm = () => {
   document.getElementById("new-contact-form").style = "display: none";
   document.getElementById("add-contact-hide").style = "display: none";
 };
+
+function deleteContact(id){
+  let a = JSON.parse(window.localStorage.getItem('contacts'))
+  for (var i = 0; i < a.length; i++) {
+  if (a[i].id == id) {
+  a.splice(i ,1);
+  window.localStorage.setItem('contacts', JSON.stringify(a))
+  window.location.reload(true);
+  }
+}
+
+}
+
+
 </script>
 
 
