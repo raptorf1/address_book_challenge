@@ -86,6 +86,12 @@
 showAddContactForm = () => {
   document.getElementById("new-contact-form").style = "display: block";
   document.getElementById("add-contact-hide").style = "display: inline";
+  document.getElementById("contact-name").value = "";
+  document.getElementById("contact-company").value = "";
+  document.getElementById("contact-email").value = "";
+  document.getElementById("contact-phone").value = "";
+  document.getElementById("contact-twitter").value = "";
+  document.getElementById("contact-notes").value = "";
 };
 
 hideShowAddContactForm = () => {
@@ -94,28 +100,31 @@ hideShowAddContactForm = () => {
 };
 
 function deleteContact(id){
-  let con = JSON.parse(window.localStorage.getItem('contacts'))
-  for (var i = 0; i < con.length; i++) {
-    if (con[i].id == id) {
-    con.splice(i ,1);
-    window.localStorage.setItem('contacts', JSON.stringify(con))
+  let conDel = JSON.parse(window.localStorage.getItem('contacts'))
+  for (var i = 0; i < conDel.length; i++) {
+    if (conDel[i].id == id) {
+    conDel.splice(i ,1);
+    window.localStorage.setItem('contacts', JSON.stringify(conDel))
     window.location.reload(true);
     }
   }
-}
+};
 
-editContact = () => {
+function editContact(id) {
   document.getElementById("new-contact-form").style = "display: block";
-  
-
-  
-  
-  document.getElementById("contact-name").value = "something";
-  document.getElementById("contact-company").value = "something";
-  document.getElementById("contact-email").value = "something";
-  document.getElementById("contact-phone").value = "something";
-  document.getElementById("contact-twitter").value = "something";
-  document.getElementById("contact-notes").value = "something";
+  let conEdit = JSON.parse(window.localStorage.getItem('contacts'));
+  for (var i = 0; i < conEdit.length; i++) {
+    if (conEdit[i].id == id) {
+      document.getElementById("contact-name").value = conEdit[i].name;
+      document.getElementById("contact-company").value = conEdit[i].company;
+      document.getElementById("contact-email").value = conEdit[i].email;
+      document.getElementById("contact-phone").value = conEdit[i].phone;
+      document.getElementById("contact-twitter").value = conEdit[i].twitter;
+      document.getElementById("contact-notes").value = conEdit[i].notes;
+      conEdit.splice(i ,1);
+      window.localStorage.setItem('contacts', JSON.stringify(conEdit));
+      }
+    }  
 };
 
 </script>
@@ -123,3 +132,7 @@ editContact = () => {
 </body>
 
 </html>
+
+
+if i press edit and change my mind by refreshing the page or doing nothing the contact is deleted
+when i edit and i click add contact whatever i write edits the contact
