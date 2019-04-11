@@ -45,3 +45,9 @@ I would like to be able to delete contacts
 Also as part of the design sprint sessions, the team has decided to make this a web-based application. This means the user would need to access this from a browser. The application will consist of a user interface built with HTML with a sprinkle of CSS to make it look good. The logic will be written using pure Javascript with no additional libraries.
 
 In addition to that, we would like to have some acceptance tests (also known as end-to-end testing) done while building this application.
+
+
+
+w3 schools
+tailwind
+stackoverflow
