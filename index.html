@@ -18,13 +18,14 @@
   
   <h1 class="text-red-dark">My Address Book</h1>
       <div class ="items-center" style ="text-align:center"> 
-        <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 border border-blue-darker rounded items-center" id="add-contact">Add Contact</button>
+        <button onclick="showAddContactForm()" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 border border-blue-darker rounded items-center" id="add-contact">Add Contact</button>
+        <button style="display: none" onclick="hideShowAddContactForm()" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 border border-blue-darker rounded items-center" id="add-contact-hide">Hide Contact Form</button>
       </div>
   
   
  
 
-  <form action="#" id="new-contact-form" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
+  <form action="#" style="display: none" id="new-contact-form" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
       <h2 class="w3-center">Contact Details</h2>
        
       <div class="w3-row w3-section">
@@ -79,6 +80,21 @@
   </div>
       
   <script src="./dist/bundle.js"></script>
+
+
+<script>
+showAddContactForm = () => {
+  document.getElementById("new-contact-form").style = "display: block";
+  document.getElementById("add-contact-hide").style = "display: inline";
+};
+
+hideShowAddContactForm = () => {
+  document.getElementById("new-contact-form").style = "display: none";
+  document.getElementById("add-contact-hide").style = "display: none";
+};
+</script>
+
+
 </body>
 
 </html>
