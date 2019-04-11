@@ -53,7 +53,7 @@ After you fork the repository, run `yarn build` in your Terminal and make sure y
 
 Then, from your Terminal go to the project folder and run `yarn cucumber`.
 
-During the time we were building the project we saw that cucumber is a bit unreliable at times. Although all tests are not passing the code is solid and the files aroung the index.html work as expected.
+During the time we were building the project we saw that cucumber is a bit unreliable at times. Although all tests are not passing the code is solid and the files aroung the index.html work as expected. [48/50 tests are passing]
 
 # Built With
 
