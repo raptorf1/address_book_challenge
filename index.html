@@ -8,22 +8,65 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" href="src/style.css">
 
   <title>Address book</title>
 </head>
 
-<body class =" bg-grey-dark">
-    <div class="container mx-auto">
+<body style=" background: url(src/images/background.jpg) no-repeat center center fixed !important;">
+   
+   
   
-  <h1 class="text-red-dark">My Address Book</h1>
+   <!-- <h1 class="text-red-dark">My Address Book</h1>
       <div class ="items-center" style ="text-align:center"> 
         <button onclick="showAddContactForm()" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 border border-blue-darker rounded items-center" id="add-contact">Add Contact</button>
         <button style="display: none" onclick="hideShowAddContactForm()" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 border border-blue-darker rounded items-center" id="add-contact-hide">Hide Contact Form</button>
-      </div>
-  
-  
+      </div> 
+   -->
+
+    <div class = "top"><h1>Address Book Pro</h1></div>
+    <div class ="button_bar" style ="text-align:center"> 
+        <button onclick="showAddContactForm()" class="active:outline-none focus:outline-none top1 bg-transparent text-black border border-black hover:bg-black hover:text-white py-4 px-6 border border-black hover:border-transparent" id="add-contact">Add Contact</button>
+        <button style="display: none" onclick="hideShowAddContactForm()" class="active:outline-none focus:outline-none top1 bg-transparent text-black border border-black hover:bg-black hover:text-white py-4 px-6 border border-black hover:border-transparent" id="add-contact-hide">Hide Contact Form</button>
+        <button  id="edit-contact" onclick="Button_visibility_Edit()" class="active:outline-none focus:outline-none top1 bg-transparent text-black border border-black hover:bg-black hover:text-white py-4 px-6 border border-black hover:border-transparent">Edit Contact</button>
+        <button id="delete-contact" onclick="Button_visibility_Delete()" class="active:outline-none focus:outline-none button_card_delete top1 bg-transparent text-black border border-black hover:bg-black hover:text-white py-4 px-6 border border-black hover:border-transparent" >Delete Contact</button> 
+    </div>
+
+     <div class="container mx-auto">
  
+
+
+
+<form  action="#" style="display: none" id="new-contact-form" class="w-full">
+      <div class = "div_form_craft">
+      <div style="margin-top: -17px; margin-bottom:30px">
+      <h2 style="font-size:40px; text-align:center; ">Contact Details</h2>
+         </div>
+         <div class="form_craft flex items-center border-b border-b-2 border-black py-2">
+            <input id="contact-name" name="name" type="text" placeholder="Name" class="appearance-none bg-transparent border-none w-full text-black-darker mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Jane Doe" aria-label="Full name">
+         </div>
+         <div class="form_craft flex items-center border-b border-b-2 border-black py-2">
+            <input id="contact-company" name="company" type="text" placeholder="Company" class="appearance-none bg-transparent border-none w-full text-black-darker mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Jane Doe" aria-label="Full name">
+         </div>
+         <div class="form_craft flex items-center border-b border-b-2 border-black py-2">
+            <input id="contact-email" name="email" type="text" placeholder="Email" class="appearance-none bg-transparent border-none w-full text-black-darker mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Jane Doe" aria-label="E-mail">
+         </div>
+         <div class="form_craft flex items-center border-b border-b-2 border-black py-2">
+            <input id="contact-phone" name="phone" type="text" placeholder="Phone" class="appearance-none bg-transparent border-none w-full text-black-darker mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Jane Doe" aria-label="Phone">
+         </div>
+         <div class="form_craft flex items-center border-b border-b-2 border-black py-2">
+            <input id="contact-twitter" name="twitter" type="text" placeholder="Twitter" class="appearance-none bg-transparent border-none w-full text-black-darker mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Jane Doe" aria-label="Twitter">
+         </div>
+         <div class="form_craft flex items-center border-b border-b-2 border-black py-2">
+            <input rows="5" id="contact-notes" name="notes" type="text" placeholder="Notes" class="appearance-none bg-transparent border-none w-full text-black-darker mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Jane Doe" aria-label="Notes">
+         </div>
+
+         <button style = "width:100%" id="save-contact" type="submit" class="pt-5 pb-4 bg-green mt-10 hover:bg-green-dark text-white text-xl font-bold py-2 px-4">Save Contact</button>
+      </div>
+      </form>
+
+ <!--
 
   <form action="#" style="display: none" id="new-contact-form" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
       <h2 class="w3-center">Contact Details</h2>
@@ -74,6 +117,8 @@
       
       </form>
 
+       -->
+
   
       <div id="contact-list" class="flex mb-4">
         </div>
@@ -83,17 +128,55 @@
 
 
 <script>
+
+Button_visibility_Delete = () => {
+  var x = document.getElementsByClassName("button_remove");
+  for (i = 0; i < x.length; i++) {
+  x.item(i).style.display = "block";
+  }
+    document.getElementById("delete-contact").style.background = "#a7a7a7";
+    document.getElementById("delete-contact").style.color = "white";
+};
+
+
+
+Button_visibility_Edit = () => {
+  var x = document.getElementsByClassName("button_edit");
+  for (i = 0; i < x.length; i++) {
+  x.item(i).style.display = "block";
+  }
+    document.getElementById("edit-contact").style.background = "#a7a7a7";
+    document.getElementById("edit-contact").style.color = "white";
+   
+};
+
 showAddContactForm = () => {
+  document.getElementById("edit-contact").style = "display: none";
+  document.getElementById("delete-contact").style = "display: none";
   document.getElementById("new-contact-form").style = "display: block";
   document.getElementById("add-contact-hide").style = "display: inline";
   let inputNameForm = document.getElementById("contact-name");
   inputNameForm.focus();
   inputNameForm.select();
+
+  var c = document.getElementsByClassName("button_edit");
+  for (i = 0; i < c.length; i++) {
+  c.item(i).style.display = "none";
+  }
+
+  var y = document.getElementsByClassName("button_remove");
+  for (i = 0; i < y.length; i++) {
+  y.item(i).style.display = "none";
+  }
+
+
+
 };
 
 hideShowAddContactForm = () => {
   document.getElementById("new-contact-form").style = "display: none";
   document.getElementById("add-contact-hide").style = "display: none";
+  window.location.reload(true);
 };
 
 function deleteContact(id){
@@ -108,8 +191,11 @@ function deleteContact(id){
 };
 
 function editContact(id) {
-  document.getElementById("add-contact").disabled = true;
+
+  document.getElementById("add-contact").style = "display: none";
+  document.getElementById("edit-contact").style = "display: none";
   document.getElementById("new-contact-form").style = "display: block";
+
   let conEdit = JSON.parse(window.localStorage.getItem('contacts'));
   for (var i = 0; i < conEdit.length; i++) {
     if (conEdit[i].id == id) {
@@ -122,6 +208,13 @@ function editContact(id) {
       conEdit.splice(i ,1);
       alert("You selected to edit a contact, please do not refresh your browser and make sure to push the ONLY the 'Save Contact' button, even if you do not want to make changes to the contact. Otherwise the contact will be DELETED!")
       window.localStorage.setItem('contacts', JSON.stringify(conEdit));
+ 
+ var z = document.getElementsByClassName("button_edit");
+  for (i = 0; i < z.length; i++) {
+  z.item(i).style.display = "none";
+  }
+      document.getElementById("delete-contact").style = "display: none";
+     
       }
     }  
 };

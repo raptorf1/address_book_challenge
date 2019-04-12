@@ -18,33 +18,32 @@ const renderContacts = () => {
       contacts.forEach(contact => {
         let li = document.createElement('li')
         li.innerHTML = `
-        <div class="max-w-md w-full lg:flex" id:"card">
-        <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('https://cdn1.comparetv.com.au/wp-content/uploads/2016/10/phone_hp.jpg'); height: 100px; width: 100px">
-        </div>
-        <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-          <div class="mb-8">
-            <p class="text-sm text-grey-dark flex items-center">
-              <svg class="fill-current text-grey w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-              </svg>
-              ID: ${contact.id}
-            </p>
-            <div class="content">
-              <h5>${ contact.name }</h5>
-              <h6>${ contact.company }</h6>
-              <p>${ contact.notes }</p>
-              <p>${ contact.phone }</p>
-              <a href="mailto:${ contact.email }">Send Email</a> | 
-              <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
-              <br>
-              <br>
-              <button id="editContact" class="bg-green hover:bg-green-dark text-white font-bold py-1 px-1 border border-blue-darker rounded-full" onclick="editContact(${contact.id})">Edit</button>
-              <br>
-              <br>
-              <button id="removeContact" class="bg-red hover:bg-red-dark text-white font-bold py-1 px-1 border border-blue-darker rounded-full" onclick="deleteContact(${contact.id})">Remove</button>
-              </div>
-        </div>
-      </div>     
+ 
+               <div class="flex mb-4" id:"card">
+                   <div class="w-2/5 image1 p-3">
+                      <img src = "http://www.stefankarlberg.se//bilder_craft/person.jpg" class = "image_person">
+                   </div>
+                   <div class="w-3/5 p-3 pr-4">
+                      <h2>${ contact.name }</h2>
+                      <h3>${ contact.company }</h3>
+                      <h5><a href="mailto:${ contact.email }">${ contact.email }</a></h5>
+                      <p>${ contact.notes }</p> 
+                      <span style="font-size: 2em; color: black;">
+                          <a href="https://www.twitter.com/${ contact.twitter}">
+                          <i class="fab fa-twitter"></i>
+                          </a>
+                      </span 
+               
+                       <div class = "btn_delete23">
+                      <button id = "button_card_delete" style="display:none" class="button_remove bg-red hover:bg-red-dark text-white py-1 px-2" onclick="deleteContact(${contact.id})">Delete</button>      
+                      <button id = "button_card_edit" style="display:none" class="button_edit bg-green hover:bg-green-dark text-white py-1 px-2" onclick="editContact(${contact.id})">Edit</button>      
+                      
+                      </div>
+              </div
+             
+
+
+   
       
       `
         // Add the contact's li to the unordered list we created earlier
