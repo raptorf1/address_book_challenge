@@ -80,6 +80,11 @@ function editContact(id) {
         bEd.item(i).style.display = "none";
         }
 
+      let bRem = document.getElementsByClassName("button_remove");
+      for (i = 0; i < bRem.length; i++) {
+        bRem.item(i).style.display = "none";
+        }
+
       document.getElementById("delete-contact").style = "display: none";     
       }
     }  

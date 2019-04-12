@@ -17,12 +17,10 @@ Feature: Create contacts
     And I click "Save contact"
     Then I should have 1 contact in my address book
     And I should see "John Doe"
-    And I should not see "You have no contacts in your address book"
 
   Scenario: User creates multiple contacts
     Given I visit the site
     Then I should see "My Address Book"
-    And I should see "You have no contacts in your address book"
     When I click "Add contact"
     Then I fill in "Name" with "John Doe"
     And I fill in "Email" with "john@doe.com"
@@ -56,8 +54,9 @@ Feature: Create contacts
     And I click "Save contact"
     Then I should have 1 contact in my address book
     And I should see "John Doe"
-    Then I click "Remove" to delete the contact
-    And I should have 0 contacts in my address book
+    When I click "Delete Contact" to open the delete button
+    And I click "Delete" to delete the contact
+    Then I should have 0 contacts in my address book
 
 Scenario: User creates a new contact & edits it
     Given I visit the site
@@ -71,7 +70,8 @@ Scenario: User creates a new contact & edits it
     And I fill in "Twitter" with "johndoe"
     And I click "Save contact"
     Then I should have 1 contact in my address book
-    Then I click "Edit" to edit the contact
+    Then I click "Edit Contact" to open the edit button
+    Then I click "Edit" to open form again
     Then I fill in "Name" with "John Doe jr."
     And I fill in "Email" with "johndjr@doe.com"
     And I fill in "Phone" with "01234565789"
