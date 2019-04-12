@@ -1,17 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+
+
+a {
+   text-decoration: none;
+}
+
 h1 {
     text-align:center;
     font-weight: bold;
     font-size: 40px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+h2{
+    margin-top:10px;
+    font-size: 27px;
+  }
+
+
+h3 {
+  margin-top:0px;
+    font-size: 20px;
+    margin-top: -12px;
+}
+
+p {
+    color:#606f7b;
+}
+
+.top {
+    width:100%;
+    background-color: black;  
+    padding: 10px; 
+}
+
+.btn_delete23 {
+position: absolute;
+
+}
+
+.button_bar{
+    width: 100%;
+  
+    margin-top: 30px;
+    padding: 10px; 
+}
+
+button {
+letter-spacing: 0.5px;
+font-family: 'Open Sans', sans-serif;
+}
+
+.button_remove{
+    margin-right: 20px;
+    float: right;
 }
 
 
+.top1 {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    }
 
+.image_person {
+  width: 163px;
+height: auto;
+}
+
+input{
+font-size: 24px;
+text-align: center;
+font-family: 'Open Sans', sans-serif;
+letter-spacing:0.7px;
+color:black;
+margin-bottom: -7px;
+}
+
+.div_form_craft{
+background:white; 
+padding:40px; 
+margin-left:28px; 
+margin-right:34px;  
+margin-bottom: 40px; 
+margin-top:20px;
+}
+
+.form_craft{
+margin-top: 27px;
+}
+
+#card {
+    height:400px;
+}
+    
 ul {
     list-style:none; 
     display: grid;  
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    margin-left: -33px !important; 
+    grid-template-columns: 1fr 1fr; 
+    margin-left: -23px !important; 
     margin-right: 6px;
+    width: 100%;
 }
 
 li {
@@ -21,27 +111,11 @@ li {
     background: white; 
     margin: 10px;}
 
-    @media (max-width: 1216px) {
-        ul { 
-            grid-template-columns: 1fr 1fr 1fr; 
-            width: 100%;
-            }
-
-    }
-    
     @media (max-width: 992px) {
-        ul { 
-            grid-template-columns: 1fr 1fr; 
-            width: 100%;
-            }
-
-    }
-
-    @media (max-width: 768px) {
         ul { 
             grid-template-columns: 1fr; 
             width: 100%;
-            }
-
+            }  
     }
-    
+
+   
