@@ -26,6 +26,7 @@ const renderContacts = () => {
                    <div class="w-3/5 p-3 pr-4">
                       <h2>${ contact.name }</h2>
                       <h3>${ contact.company }</h3>
+                      <h4>${ contact.phone }</h4>
                       <h5><a href="mailto:${ contact.email }">${ contact.email }</a></h5>
                       <p>${ contact.notes }</p> 
                       <span style="font-size: 2em; color: black;">
