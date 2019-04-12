@@ -86,12 +86,9 @@
 showAddContactForm = () => {
   document.getElementById("new-contact-form").style = "display: block";
   document.getElementById("add-contact-hide").style = "display: inline";
-  document.getElementById("contact-name").value = "";
-  document.getElementById("contact-company").value = "";
-  document.getElementById("contact-email").value = "";
-  document.getElementById("contact-phone").value = "";
-  document.getElementById("contact-twitter").value = "";
-  document.getElementById("contact-notes").value = "";
+  let inputNameForm = document.getElementById("contact-name");
+  inputNameForm.focus();
+  inputNameForm.select();
 };
 
 hideShowAddContactForm = () => {
@@ -122,8 +119,10 @@ function editContact(id) {
       document.getElementById("contact-twitter").value = conEdit[i].twitter;
       document.getElementById("contact-notes").value = conEdit[i].notes;
       conEdit.splice(i ,1);
-      alert("You selected to edit a contact, please don´t refresh your browser and make sure to push the 'Save Contact' button, even if you don´t want to make changes to the contact. Otherwise the contact will be deleted!")
-
+      document.getElementById("add-contact").disabled = true;
+      document.getElementById("editContact").disabled = true;
+      document.getElementById("removeContact").disabled = true;
+      alert("You selected to edit a contact, please do not refresh your browser and make sure to push the 'Save Contact' button, even if you do not want to make changes to the contact. Otherwise the contact will be DELETED!")
       window.localStorage.setItem('contacts', JSON.stringify(conEdit));
       }
     }  
@@ -134,7 +133,3 @@ function editContact(id) {
 </body>
 
 </html>
-
-
-if i press edit and change my mind by refreshing the page or doing nothing the contact is deleted
-when i edit and i click add contact whatever i write edits the contact
