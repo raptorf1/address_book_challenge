@@ -58,7 +58,6 @@ function deleteContact(id){
 };
 
 function editContact(id) {
-
   document.getElementById("add-contact").style = "display: none";
   document.getElementById("edit-contact").style = "display: none";
   document.getElementById("new-contact-form").style = "display: block";
@@ -73,15 +72,15 @@ function editContact(id) {
       document.getElementById("contact-twitter").value = conEdit[i].twitter;
       document.getElementById("contact-notes").value = conEdit[i].notes;
       conEdit.splice(i ,1);
-      alert("You selected to edit a contact, please do not refresh your browser and make sure to push the 'Save Contact' button, even if you do not want to make changes to the contact. Otherwise the contact will be DELETED!")
+      alert("You selected to edit a contact. Please do NOT refresh your browser and make sure to push the 'Save Contact' button, even if you do not want to make changes to the contact. Otherwise the contact will be DELETED!")
       window.localStorage.setItem('contacts', JSON.stringify(conEdit));
- 
- let bEd = document.getElementsByClassName("button_edit");
-  for (i = 0; i < bEd.length; i++) {
-  bEd.item(i).style.display = "none";
-  }
-      document.getElementById("delete-contact").style = "display: none";
-     
+
+      let bEd = document.getElementsByClassName("button_edit");
+      for (i = 0; i < bEd.length; i++) {
+        bEd.item(i).style.display = "none";
+        }
+
+      document.getElementById("delete-contact").style = "display: none";     
       }
     }  
 };

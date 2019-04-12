@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
 
-body{
+body {
     background-repeat: no-repeat, repeat;
-background-size: cover;
--webkit-background-size: cover;
--moz-background-size: cover;
-background-size: cover;
--o-background-size: cover;
-
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
 
@@ -23,10 +22,10 @@ h1 {
     color: white;
 }
 
-h2{
+h2 {
     margin-top:10px;
     font-size: 27px;
-  }
+}
 
 
 h3 {
@@ -36,7 +35,7 @@ h3 {
 }
 
 h4 {
-  margin-top:0px;
+    margin-top:0px;
     font-size: 16px;
     margin-top: -12px;
     color: #9E9E9E;
@@ -61,7 +60,6 @@ p {
 
 .button_bar{
     width: 100%;
-  
     margin-top: 30px;
     padding: 10px; 
 }
@@ -71,12 +69,12 @@ letter-spacing: 0.5px;
 font-family: 'Open Sans', sans-serif;
 }
 
-.button_remove{
+.button_remove {
     margin-right: 20px;
     float: right;
 }
 
-#button_card_edit{
+#button_card_edit {
     float:right;
     margin-right: 10px;
 }
@@ -86,33 +84,33 @@ font-family: 'Open Sans', sans-serif;
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 10px;
-    }
+}
 
 .image_person {
-  width: 163px;
-height: auto;
+    width: 163px;
+    height: auto;
 }
 
-input{
-font-size: 24px;
-text-align: center;
-font-family: 'Open Sans', sans-serif;
-letter-spacing:0.7px;
-color:black;
-margin-bottom: -7px;
+input {
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing:0.7px;
+    color:black;
+    margin-bottom: -7px;
 }
 
-.div_form_craft{
-background:white; 
-padding:40px; 
-margin-left:28px; 
-margin-right:34px;  
-margin-bottom: 40px; 
-margin-top:20px;
+.div_form_craft {
+    background:white; 
+    padding:40px; 
+    margin-left:28px; 
+    margin-right:34px;  
+    margin-bottom: 40px; 
+    margin-top:20px;
 }
 
-.form_craft{
-margin-top: 27px;
+.form_craft {
+    margin-top: 27px;
 }
     
 ul {
@@ -131,32 +129,29 @@ li {
     background: white; 
     margin: 10px;}
 
-    @media (max-width: 992px) {
-        ul { 
-            grid-template-columns: 1fr; 
-            width: 100%;
-            }  
-    }
+@media (max-width: 992px) {
+    ul {
+        grid-template-columns: 1fr; 
+        width: 100%;
+        }  
+}
 
-    @media (max-width: 576px) {
-         
-         h1 {
+@media (max-width: 576px) {
+
+    h1 {
         font-size: 30px;
-         }
+        }
 
-         h2 {
+        h2 {
         font-size: 20px;
-         }
+        }
 
         h4 {
         font-size: 13px;
         }
 
-         p {
+        p {
         font-size: 14px;
-         }
-
-
-         
         }
-        
+
+}

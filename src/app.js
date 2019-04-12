@@ -25,26 +25,22 @@ const renderContacts = () => {
                    </div>
                    <div class="w-3/5 p-3 pr-4">
                       <h2>${ contact.name }</h2>
-                      <h3>${ contact.company }</h3>
-                      <h4>${ contact.phone }</h4>
-                      <h5><a href="mailto:${ contact.email }">${ contact.email }</a></h5>
+                      <h4>${ contact.company }</h4>
+                      <h5>${ contact.phone }</h5>
+                      <h6><a href="mailto:${ contact.email }">${ contact.email }</a></h6>
                       <p>${ contact.notes }</p> 
-                      <span style="font-size: 2em; color: black;">
-                          <a href="https://www.twitter.com/${ contact.twitter}">
+                        <span style="font-size: 1.5em; color: black;">
+                          <a href="https://www.twitter.com/${ contact.twitter}" target="_blank">
                           <i class="fab fa-twitter"></i>
                           </a>
-                      </span 
+                        </span
+                    </div>
                
-                       <div class = "btn_delete23">
+                    <div class = "btn_delete23">
                       <button id = "button_card_delete" style="display:none" class="button_remove bg-red hover:bg-red-dark text-white py-1 px-2" onclick="deleteContact(${contact.id})">Delete</button>      
                       <button id = "button_card_edit" style="display:none" class="button_edit bg-green hover:bg-green-dark text-white py-1 px-2" onclick="editContact(${contact.id})">Edit</button>      
-                      
-                      </div>
-              </div
-             
-
-
-   
+                    </div>
+              </div  
       
       `
         // Add the contact's li to the unordered list we created earlier
