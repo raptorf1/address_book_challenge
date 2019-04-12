@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
 
+body{
+    background-repeat: no-repeat, repeat;
+background-size: cover;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+background-size: cover;
+-o-background-size: cover;
+
+}
+
 
 a {
    text-decoration: none;
@@ -25,8 +35,16 @@ h3 {
     margin-top: -12px;
 }
 
+h4 {
+  margin-top:0px;
+    font-size: 16px;
+    margin-top: -12px;
+    color: #9E9E9E;
+}
+
 p {
     color:#606f7b;
+    margin-top:16px;
 }
 
 .top {
@@ -35,9 +53,10 @@ p {
     padding: 10px; 
 }
 
-.btn_delete23 {
-position: absolute;
-
+.card_bottom {
+    position: relative;
+    right: 0;
+    bottom: 0;
 }
 
 .button_bar{
@@ -55,6 +74,11 @@ font-family: 'Open Sans', sans-serif;
 .button_remove{
     margin-right: 20px;
     float: right;
+}
+
+#button_card_edit{
+    float:right;
+    margin-right: 10px;
 }
 
 
@@ -90,10 +114,6 @@ margin-top:20px;
 .form_craft{
 margin-top: 27px;
 }
-
-#card {
-    height:400px;
-}
     
 ul {
     list-style:none; 
@@ -118,4 +138,25 @@ li {
             }  
     }
 
-   
+    @media (max-width: 576px) {
+         
+         h1 {
+        font-size: 30px;
+         }
+
+         h2 {
+        font-size: 20px;
+         }
+
+        h4 {
+        font-size: 13px;
+        }
+
+         p {
+        font-size: 14px;
+         }
+
+
+         
+        }
+        
