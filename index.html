@@ -122,6 +122,8 @@ function editContact(id) {
       document.getElementById("contact-twitter").value = conEdit[i].twitter;
       document.getElementById("contact-notes").value = conEdit[i].notes;
       conEdit.splice(i ,1);
+      alert("You selected to edit a contact, please don´t refresh your browser and make sure to push the 'Save Contact' button, even if you don´t want to make changes to the contact.")
+
       window.localStorage.setItem('contacts', JSON.stringify(conEdit));
       }
     }  
