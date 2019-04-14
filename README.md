@@ -13,8 +13,8 @@ We've recently been contacted by a client, who would like us to build an address
 # Technology Stack
 
 <p>Also as part of the design sprint sessions, the team has decided to make this a web-based application. This means the user would need to access this from a browser. The application will consist of a user interface built with HTML with a sprinkle of CSS to make it look good. The logic will be written using pure JavaScript with no additional libraries.</p>
-<p><b><u>The decided method to store the contacts is at the local storage of the browser. If you use this application for personal use, keep in mind that each time you clear cookies and history, your contacts will be deleted.</u></b></p>
 <p>In addition to that, we would like to have some acceptance tests (also known as end-to-end testing) done while building this application.</p>
+<p><b><u>The decided method to store the contacts is at the local storage of the browser. If you use this application for personal use, keep in mind that each time you clear cookies and history, your contacts will be deleted.</u></b></p>
 
 # User Stories
 
@@ -54,7 +54,7 @@ After you fork the repository, run `yarn build` in your Terminal and make sure y
 
 Then, from your Terminal go to the project folder and run `yarn cucumber`.
 
-During the time we were building the project we saw that cucumber is a bit unreliable at times. Although all tests are not passing the code is solid and the files aroung the index.html work as expected.
+During the time we were building the project we saw that cucumber is a bit unreliable at times. Although all scenarios/tests are passing, do not be surprised if you run them and encounter failures. The codebase is solid and the files around the index.html work as expected.
 
 # Built With
 
