@@ -16,7 +16,7 @@ Feature: Create contacts
     And I fill in "Twitter" with "johndoe"
     And I click "Save contact"
     Then I should have 1 contact in my address book
-    And I should see "John Doe"
+    Then I should see "John Doe"
 
   Scenario: User creates multiple contacts
     Given I visit the site
@@ -38,9 +38,9 @@ Feature: Create contacts
     And I fill in "Twitter" with "janedoe"
     And I click "Save contact"
     Then I should have 2 contact in my address book
-    And I should see "John Doe"
-    And I should see "Jane Doe"
-    
+    Then I should see "John Doe"
+    Then I should see "Jane Doe"
+
   Scenario: User creates a new contact & deletes it
     Given I visit the site
     Then I should see "My Address Book"
@@ -52,11 +52,9 @@ Feature: Create contacts
     And I fill in "Notes" with "A really awsome guy :-)"
     And I fill in "Twitter" with "johndoe"
     And I click "Save contact"
-    Then I should have 1 contact in my address book
-    And I should see "John Doe"
     When I click "Delete Contact" to open the delete button
     And I click "Delete" to delete the contact
-    Then I should have 0 contacts in my address book
+    Then I should have 0 contact in my address book
 
 Scenario: User creates a new contact & edits it
     Given I visit the site
@@ -80,3 +78,5 @@ Scenario: User creates a new contact & edits it
     And I fill in "Twitter" with "johndoeJR"
     Then I click "Save Contact"
     And I should have 1 contact in my address book
+    Then I should see "John DoeJohn Doe jr."
+    

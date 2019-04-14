@@ -45,16 +45,16 @@ class AddressBookWorld {
       case 'save contact':
         return '#save-contact'
         break
-      case 'remove':
+      case 'delete contact':
         return '#delete-contact'
         break
-      case 'edit':
+      case 'edit contact':
         return '#edit-contact'
         break
       case 'delete':
         return '#button_card_delete'
         break
-      case 'card edit':
+      case 'edit':
         return '#button_card_edit'
         break
       default:
