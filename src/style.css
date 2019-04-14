@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 
-body {
+body{
     background-repeat: no-repeat, repeat;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    background-size: cover;
     -o-background-size: cover;
 }
 
@@ -15,20 +14,20 @@ a {
 
 h1 {
     text-align:center;
-    font-weight: bold;
-    font-size: 40px;
+    font-weight: 400;
+    font-size: 49px;
     font-family: 'Open Sans', sans-serif;
     color: white;
 }
 
-h2 {
+h2{
     margin-top:10px;
-    font-size: 27px;
-}
+    font-size: 28px;
+  }
+
 
 h3 {
-  margin-top:0px;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: -12px;
 }
 
@@ -36,12 +35,16 @@ h4 {
     margin-top:0px;
     font-size: 16px;
     margin-top: -12px;
-    color: #9E9E9E;
+    font-family: Open Sans;
+	font-weight: 300;
+	line-height: 1.8;
 }
 
 p {
-    color:#606f7b;
-    margin-top:16px;
+    font-family: Open Sans;
+	font-weight: 300;
+	line-height: 1.8;
+    margin-bottom: 16px;
 }
 
 .top {
@@ -50,26 +53,44 @@ p {
     padding: 10px; 
 }
 
-.card_bottom {
-    position: relative;
-    right: 0;
-    bottom: 0;
+.card {
+    min-height:270px;
+}
+
+.card_column_left {
+    min-width: 35%;
+    min-height:100%;
+    padding:10px;
+
+}
+.card_column_left_image {
+    background-image: url(images/person.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height:100%;
+}
+
+.card_column_bottom {
+    margin-top: auto;
+    align-items: flex-end;
 }
 
 .button_bar{
     width: 100%;
     margin-top: 30px;
-    padding: 10px;
+    padding: 10px; 
 }
 
 button {
-letter-spacing: 0.5px;
-font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.5px;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.button_remove {
-    margin-right: 20px;
+.card_button {
     float: right;
+    width: 70px;
+    font-size: 16px;
 }
 
 #button_card_edit {
@@ -77,47 +98,47 @@ font-family: 'Open Sans', sans-serif;
     margin-right: 10px;
 }
 
-
 .top1 {
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 10px;
-}
+    }
 
 .image_person {
-    width: 163px;
+    width: 188px;
     height: auto;
 }
 
-input {
-    font-size: 24px;
+.div_form_craft{
+    background:white; 
+    padding:40px;   
+    margin-bottom: 40px; 
+    margin-top:20px;
+}
+
+.form_craft {
+    border-width: 1px;
+    border-color: #c7c7c7;
+    height: 63px;
+    margin-top: 20px;
+}
+
+input{
+    font-size: 22px;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     letter-spacing:0.7px;
     color:black;
     margin-bottom: -7px;
 }
-
-.div_form_craft {
-    background:white; 
-    padding:40px; 
-    margin-left:28px; 
-    margin-right:34px;  
-    margin-bottom: 40px; 
-    margin-top:20px;
-}
-
-.form_craft {
-    margin-top: 27px;
-}
-    
+  
 ul {
     list-style:none; 
     display: grid;  
     grid-template-columns: 1fr 1fr; 
-    margin-left: -23px !important; 
-    margin-right: 6px;
+    margin:0px !important!;
     width: 100%;
+    padding-inline-start: 0px;
 }
 
 li {
@@ -125,51 +146,53 @@ li {
     height:auto;
     width: auto;
     background: white; 
-    margin: 10px;}
+    margin: 15px;
+    display: flex;
+    }
 
 @media (max-width: 992px) {
-    ul {
-        grid-template-columns: 1fr; 
-        width: 100%;
-        }  
+    ul { 
+    grid-template-columns: 1fr; 
+    width: 100%;
+    }  
+
+    .card_button {
+    width: 61px;
+    font-size: 15px;
+    padding: 5px;
+    }
 }
 
 @media (max-width: 576px) {
-
+    
     h1 {
-        font-size: 30px;
-        }
+    font-size: 32px;
+    }
 
-        h2 {
-        font-size: 20px;
-        }
+    h2 {
+    font-size: 29px;
+    }
 
-        h4 {
-        font-size: 13px;
-        }
+    h4 {
+    font-size: 13px;
+    }
 
-        p {
-        font-size: 14px;
-        }
+    p {
+    font-size: 14px;
+    }
 
+.card_column_left {
+    width: 100%;
+    min-height: 305px;
+    background-image: url(images/person.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+    }
+}       
+         
 }
 
-#myBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: red;
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 4px;
-  }
-  
-  #myBtn:hover {
-    background-color: #555;
-  }
+   
+
+   
