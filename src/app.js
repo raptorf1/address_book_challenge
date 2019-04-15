@@ -24,24 +24,24 @@ const renderContacts = () => {
             <div class = "card_column_left_image flex-none">
             </div>
         </div>
-       <div class="p-4 pl-6 flex flex-col">
-           <div>
-              <h2>${ contact.name }</h2>
-              <h3>${ contact.company }</h3>
-              <h4>${ contact.phone }</h4>
-              <p>${ contact.notes }</p>
-           </div>
+       <div class="card_column_right p-4 pl-6 flex flex-col">
+          <div>
+            <h2>${ contact.name }</h2>
+            <h3>${ contact.company }</h3>
+            <h4>${ contact.phone }</h4>
+            <p>${ contact.notes }</p>
+          </div>
 
-          <div class="flex card_bottom pin-b pin-r card_column_bottom">
-              <div class="w-2/5 float:left">
-                  <span style="font-size: 2em; color: black; margin-right:10px;">
+          <div class="flex pin-b card_column_bottom">
+              <div class="w-2/5 object-left-bottom">
+                  <span class = "icon_email object-left-bottom" style="font-size: 2em; color: black; margin-right:4px;">
                   <a href="mailto:${ contact.email }"><i class="fas fa-envelope fa-w-16"></i></a>
                   </span>
-                  <span style="font-size: 2em; color: black;">
+                  <span class = "icon_twitter object-left-bottom" style="font-size: 2em; color: black;">
                   <a href="https://www.twitter.com/${ contact.twitter}"><i class="fab fa-twitter"></i></a>
                   </span>
-              </div>
-              <div class="w-3/5 style = "float:right">
+              </div>    
+              <div class="w-3/5 pin-r pin-b" style = "float:right">
                   <button id = "button_card_delete" style="display:none" class="button_remove card_button bg-red hover:bg-red-dark text-white py-2 px-3" onclick="deleteContact(${contact.id})">Delete</button>      
                   <button id = "button_card_edit" style="display:none" class="button_edit card_button bg-green hover:bg-green-dark text-white py-2 px-3" onclick="editContact(${contact.id})">Edit</button>      
               </div>

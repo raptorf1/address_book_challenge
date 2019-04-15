@@ -61,8 +61,13 @@ p {
     min-width: 35%;
     min-height:100%;
     padding:10px;
-
 }
+
+.card_column_right {
+    min-width: 65%;
+}
+
+
 .card_column_left_image {
     background-image: url(images/person.jpg);
     background-size: cover;
