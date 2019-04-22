@@ -107,3 +107,21 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+HideEmail = () => {
+  const emailIcon = document.getElementsByClassName("fas fa-envelope fa-w-16");
+  for (i=0; i < emailIcon.length; i++) {
+    if (emailIcon[i].id == "") {
+      emailIcon[i].style.display = "none";
+    }
+  }
+}
+
+HideTwitter = () => {
+  const twitterIcon = document.getElementsByClassName("fab fa-twitter");
+  for (i=0; i < twitterIcon.length; i++) {
+    if (twitterIcon[i].id == "") {
+      twitterIcon[i].style.display = "none";
+    }
+  }
+}

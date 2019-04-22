@@ -35,10 +35,10 @@ const renderContacts = () => {
           <div class="flex pin-b card_column_bottom">
               <div class="w-2/5 object-left-bottom">
                   <span class = "icon_email object-left-bottom" style="font-size: 2em; color: black; margin-right:4px;">
-                  <a href="mailto:${ contact.email }"><i class="fas fa-envelope fa-w-16"></i></a>
+                  <a href="mailto:${ contact.email }"><i id="${contact.email}" class="fas fa-envelope fa-w-16"></i></a>
                   </span>
                   <span class = "icon_twitter object-left-bottom" style="font-size: 2em; color: black;">
-                  <a href="https://www.twitter.com/${ contact.twitter}"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.twitter.com/${ contact.twitter}" target="_blank"><i id="${contact.twitter}" class="fab fa-twitter"></i></a>
                   </span>
               </div>    
               <div class="w-3/5 pin-r pin-b" style = "float:right">
