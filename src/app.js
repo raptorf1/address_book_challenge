@@ -42,8 +42,8 @@ const renderContacts = () => {
                   </span>
               </div>    
               <div class="w-3/5 pin-r pin-b" style = "float:right">
-                  <button id = "button_card_delete" style="display:none" class="button_remove card_button bg-red hover:bg-red-dark text-white py-2 px-3" onclick="deleteContact(${contact.id})">Delete</button>      
-                  <button id = "button_card_edit" style="display:none" class="button_edit card_button bg-green hover:bg-green-dark text-white py-2 px-3" onclick="editContact(${contact.id})">Edit</button>      
+                  <button id="button_card_delete" style="display:none" class="button_remove card_button bg-red hover:bg-red-dark text-white py-2 px-3" onclick="deleteContact(${contact.id})">Delete</button>      
+                  <button id="button_card_edit" style="display:none" class="button_edit card_button bg-green hover:bg-green-dark text-white py-2 px-3" onclick="editContact(${contact.id})">Edit</button>      
               </div>
           </div>
         </div>
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
         storage.setItem('contacts', JSON.stringify(contacts))
 
              
-
+  
         renderContacts()
         window.location.reload(true)
     })
